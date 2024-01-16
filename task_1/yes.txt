@@ -1,1 +1,17 @@
+<<<<<<< HEAD
 нет
+=======
+да
+
+h
+f
+h
+dfh
+d
+h
+dh
+d
+hd
+hd
+fh
+>>>>>>> 3a094cdf8ce515e5642b87aa8ea9ce67b6a9383b
