@@ -28,4 +28,5 @@ Route::get('/about', [\App\Http\Controllers\FrontendController::class, 'about'])
 Route::get('/price', [\App\Http\Controllers\ListController::class, 'price'])->name('price');
 Route::get('/contacts', [\App\Http\Controllers\ListController::class, 'contacts'])->name('contacts');
 Route::get('/portfolio', [\App\Http\Controllers\ListController::class, 'portfolio'])->name('portfolio');
+Route::get('/records', [\App\Http\Controllers\ListController::class, 'records'])->name('records');
 

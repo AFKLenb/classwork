@@ -15,4 +15,7 @@ class ListController extends Controller
     public function portfolio(){
         return view('portfolio');
     }
+    public function records(){
+        return view('records');
+    }
 }
