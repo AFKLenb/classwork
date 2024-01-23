@@ -3,21 +3,10 @@
         <a href="{{ route('home') }}">{{__('Главная') }}</a>
     </li>
     <li>
-        <a href="{{ route('about') }}">{{__('О нас') }}</a>
+        <a href="{{ route('records') }}">{{__('Новости') }}</a>
     </li>
     <li>
-        <a href="{{ route('price') }}">{{__('Price') }}</a>
+        <a href="{{ route('post.index') }}">{{__('Все записи') }}</a>
     </li>
-    <li>
-        <a href="{{ route('contacts') }}">{{__('Contacts') }}</a>
-    </li>
-    <li>
-        <a href="{{ route('portfolio') }}">{{__('Portfolio') }}</a>
-    </li>
-    <li>
-        <a href="{{ route('records') }}">{{__('Records') }}</a>
-    </li>
-    <li>
-        <a href="{{ route('index') }}">{{__('index') }}</a>
-    </li>
+
 </ul>
