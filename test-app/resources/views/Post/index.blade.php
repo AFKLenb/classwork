@@ -15,29 +15,23 @@
                 <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">Название поста</th>
+                    <th scope="col">Описание поста</th>
+                    <th scope="col">Изображение поста</th>
+                    <th scope="col">Действие</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Oleg</td>
-                    <td>Jakobs</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Ivan</td>
-                    <td>Mefedronov</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                </tr>
+                @forelse($posts as $post)
+                    <tr>
+                        <th scope="row">{{$post->id}}</th>
+                        <td>{{$post->title}}</td>
+                        <td>{{$post->text}}</td>
+                        <td><img width="150" height="150" src="/images/{{ $post-> image }}" alt=""></td>
+                    </tr>
+                @empty
+                    {{__ ('Данные не найдены')}}
+                @endforelse
                 </tbody>
             </table>
         </div>

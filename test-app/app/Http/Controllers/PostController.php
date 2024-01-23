@@ -12,7 +12,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('post.index');
+        $posts = Post::all();
+        return view('post.index', compact('posts'));
     }
 
     /**
@@ -38,7 +39,7 @@ class PostController extends Controller
             $destionPath = 'images/';
             $profileImage = date('YmHis') . "." . $image->getClientOriginalExtension();
             $image->move($destionPath,$profileImage);
-            $input['image']="profileImage";
+            $input['image']="$profileImage";
         }
         Post::create($input);
         return redirect()->route('post.index')->with('success', 'Ваш пост был добавлен');
