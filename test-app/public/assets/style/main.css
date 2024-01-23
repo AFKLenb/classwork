@@ -10,7 +10,6 @@
   --secondary-color: #E8EFF5;
   --gray-sup: #D8E1EA;
 }
-
 /* stylelint-disable */
 /* stylelint-disable */
 .custom-checkbox__field:checked + .custom-checkbox__content::after {

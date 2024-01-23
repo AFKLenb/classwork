@@ -1,3 +1,4 @@
+@extends('layout.master')
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -21,6 +22,8 @@
 </head>
 
 <body class="application" id="app">
+
+@section('content')
 <div class="application__container" id="app-container">
     <header class="application__header header" id="header">
         <div class="container header__container">
@@ -388,5 +391,7 @@
         </div>
     </footer>
 </div>
+@endsection
 </body>
 </html>
+

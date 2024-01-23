@@ -18,4 +18,7 @@ class ListController extends Controller
     public function records(){
         return view('records');
     }
+    public function index(){
+        return view('index');
+    }
 }

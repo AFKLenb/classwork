@@ -17,4 +17,7 @@
     <li>
         <a href="{{ route('records') }}">{{__('Records') }}</a>
     </li>
+    <li>
+        <a href="{{ route('index') }}">{{__('index') }}</a>
+    </li>
 </ul>

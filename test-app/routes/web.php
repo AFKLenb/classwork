@@ -29,4 +29,5 @@ Route::get('/price', [\App\Http\Controllers\ListController::class, 'price'])->na
 Route::get('/contacts', [\App\Http\Controllers\ListController::class, 'contacts'])->name('contacts');
 Route::get('/portfolio', [\App\Http\Controllers\ListController::class, 'portfolio'])->name('portfolio');
 Route::get('/records', [\App\Http\Controllers\ListController::class, 'records'])->name('records');
+Route::get('/index', [\App\Http\Controllers\ListController::class, 'index'])->name('index');
 
