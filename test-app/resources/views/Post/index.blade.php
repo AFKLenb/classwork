@@ -2,6 +2,11 @@
 
 @section('content')
     <div class="container">
+        @if($massage = Session::get('success'))
+            <div class="alert alert-success" role="alert">
+                <p>{{$massage}}</p>
+            </div>
+        @endif
         <div class="row">
             <a href="{{ route('post.create') }}" class="btn btn-primary">{{__ ('Новый пост')}}</a>
         </div>

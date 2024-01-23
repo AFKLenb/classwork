@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -30,8 +31,17 @@ class PostController extends Controller
         $request->validate([
             'title' => 'required',
             'text' => 'required',
-            'image' => 'required|Image|mimes:jpg,png,jpeg,bmp,gif,svg|max:2048',
+            'image' => 'required|Image|mimes:jpg,png,jpeg,bmp,gif,svg|max:2048'
         ]);
+        $input = $request->all();
+        if ($image = $request->file('image')){
+            $destionPath = 'images/';
+            $profileImage = date('YmHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destionPath,$profileImage);
+            $input['image']="profileImage";
+        }
+        Post::create($input);
+        return redirect()->route('post.index')->with('success', 'Ваш пост был добавлен');
     }
 
     /**
