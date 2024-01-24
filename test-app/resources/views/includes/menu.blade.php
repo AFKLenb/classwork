@@ -8,5 +8,7 @@
     <li>
         <a href="{{ route('post.index') }}">{{__('Все записи') }}</a>
     </li>
-
+    <li>
+        <a href="{{ route('article.index') }}">{{__('Все articles') }}</a>
+    </li>
 </ul>

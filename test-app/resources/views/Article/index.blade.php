@@ -8,7 +8,7 @@
             </div>
         @endif
         <div class="row">
-            <a href="{{ route('post.create') }}" class="btn btn-primary">{{__ ('Новый пост')}}</a>
+            <a href="{{ route('article.create') }}" class="btn btn-primary">{{__ ('Новый пост')}}</a>
         </div>
         <div class="row">
             <table class="table">
@@ -22,16 +22,16 @@
                 </tr>
                 </thead>
                 <tbody>
-                @forelse($posts as $post)
+                @forelse($articles as $article)
                     <tr>
-                        <th scope="row">{{$post->id}}</th>
-                        <td>{{$post->title}}</td>
-                        <td>{{$post->text}}</td>
-                        <td><img width="150" height="150" src="/images/{{ $post-> image }}" alt="Тут могла быть ваша реклама"></td>
+                        <th scope="row">{{$article->id}}</th>
+                        <td>{{$article->title}}</td>
+                        <td>{{$article->text}}</td>
+                        <td><img width="150" height="150" src="/images/{{ $article-> image }}" alt="Тут могла быть ваша реклама"></td>
                         <td>
-                            <a href="{{ route('post.edit', $post->id) }}" class="btn btn-success">{{__ ('Редактировать')}}</a>
-                            <a href="{{ route('post.show', $post->id) }}" class="btn btn-warning">{{__ ('Подробнее')}}</a>
-                            <form action="{{route('post.delete', $post->id) }}" method="POST" >
+                            <a href="{{ route('article.edit', $article->id) }}" class="btn btn-success">{{__ ('Редактировать')}}</a>
+                            <a href="{{ route('article.show', $article->id) }}" class="btn btn-warning">{{__ ('Подробнее')}}</a>
+                            <form action="{{route('article.delete', $article->id) }}" method="POST" >
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">УДАЛИТЬ</button>
