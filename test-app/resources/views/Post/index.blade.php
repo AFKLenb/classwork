@@ -27,7 +27,14 @@
                         <th scope="row">{{$post->id}}</th>
                         <td>{{$post->title}}</td>
                         <td>{{$post->text}}</td>
-                        <td><img width="150" height="150" src="/images/{{ $post-> image }}" alt=""></td>
+                        <td><img width="150" height="150" src="/images/{{ $post-> image }}" alt="Тут могла быть ваша реклама"></td>
+                        <td>
+                            <form action="{{route('post.delete', $post->id) }}" method="POST" >
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger">УДАЛИТЬ!!!</button>
+                            </form>
+                        </td>
                     </tr>
                 @empty
                     {{__ ('Данные не найдены')}}
