@@ -29,10 +29,12 @@
                         <td>{{$post->text}}</td>
                         <td><img width="150" height="150" src="/images/{{ $post-> image }}" alt="Тут могла быть ваша реклама"></td>
                         <td>
+                            <a href="{{ route('post.edit', $post->id) }}" class="btn btn-success">{{__ ('Редактировать')}}</a>
+                            <a href="" class="btn btn-warning">{{__ ('Подробнее')}}</a>
                             <form action="{{route('post.delete', $post->id) }}" method="POST" >
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-danger">УДАЛИТЬ!!!</button>
+                                <button type="submit" class="btn btn-danger">УДАЛИТЬ</button>
                             </form>
                         </td>
                     </tr>
