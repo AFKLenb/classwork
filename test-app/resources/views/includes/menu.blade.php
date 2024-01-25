@@ -6,9 +6,12 @@
         <a href="{{ route('records') }}">{{__('Новости') }}</a>
     </li>
     <li>
-        <a href="{{ route('post.index') }}">{{__('Все записи') }}</a>
+        <a href="{{ route('post.index') }}">{{__('Post') }}</a>
     </li>
     <li>
-        <a href="{{ route('article.index') }}">{{__('Все articles') }}</a>
+        <a href="{{ route('article.index') }}">{{__('Articles') }}</a>
+    </li>
+    <li>
+        <a href="{{ route('category.index') }}">{{__('Категории') }}</a>
     </li>
 </ul>

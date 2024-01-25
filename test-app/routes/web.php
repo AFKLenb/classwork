@@ -43,3 +43,8 @@ Route::prefix('/article',)->group(function (){
     Route::put('/update/{article}', [\App\Http\Controllers\ArticleController::class, 'update'])->name('article.update');
     Route::delete('/delete/{article}', [\App\Http\Controllers\ArticleController::class, 'destroy'])->name('article.delete');
 });
+Route::prefix('/category')->group(function (){
+    Route::get('/index', [\App\Http\Controllers\Admin\CategoryController::class, 'index'])->name('category.index');
+    Route::get('/create', [\App\Http\Controllers\Admin\CategoryController::class, 'create'])->name('category.create');
+    Route::post('/store', [\App\Http\Controllers\Admin\CategoryController::class, 'store'])->name('category.store');
+});
