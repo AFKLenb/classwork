@@ -29,12 +29,12 @@
                         <td>{{ $category->text }}</td>
                         <td>
                             @if($category->is_active == 0)
-                                <div class="alert alert-danger">
-                                {{ __('Не активна') }}
-
+                                <div class="alert alert-danger text-center">
+                                    {{ __('Не активна') }}
+                                </div>
                             @else
-                                <div class="alert alert-success">
-                                {{ __('Активна') }}
+                                <div class="alert alert-success text-center">
+                                    {{ __('Активна') }}
                                 </div>
                             @endif
                         </td>

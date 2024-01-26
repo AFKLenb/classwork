@@ -48,3 +48,8 @@ Route::prefix('/category')->group(function (){
     Route::get('/create', [\App\Http\Controllers\Admin\CategoryController::class, 'create'])->name('category.create');
     Route::post('/store', [\App\Http\Controllers\Admin\CategoryController::class, 'store'])->name('category.store');
 });
+Route::prefix('/product')->group(function (){
+    Route::get('/index', [\App\Http\Controllers\Admin\ProductController::class, 'index'])->name('product.index');
+    Route::get('/create', [\App\Http\Controllers\Admin\ProductController::class, 'create'])->name('product.create');
+    Route::post('/store', [\App\Http\Controllers\Admin\ProductController::class, 'store'])->name('product.store');
+});

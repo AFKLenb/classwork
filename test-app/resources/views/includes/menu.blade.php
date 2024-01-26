@@ -14,4 +14,7 @@
     <li>
         <a href="{{ route('category.index') }}">{{__('Категории') }}</a>
     </li>
+    <li>
+        <a href="{{ route('product.index') }}">{{__('Товары Мариарти') }}</a>
+    </li>
 </ul>
