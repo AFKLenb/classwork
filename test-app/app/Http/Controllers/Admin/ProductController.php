@@ -15,7 +15,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('product.index');
+        $products = Product::all();
+        return view('product.index', compact('products'));
     }
 
     /**
@@ -36,7 +37,8 @@ class ProductController extends Controller
             'name' => 'required',
             'text' => 'required',
             'is_active' => 'required',
-            'category_id' => 'required'
+            'category_id' => 'required',
+            'image' => 'required|Image|mimes:jpg,png,jpeg,bmp,gif,svg|max:2048'
         ]);
         $input = $request->all();
         if ($image = $request->file('image')){
