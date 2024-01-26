@@ -15,11 +15,12 @@
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Название категории</th>
-                        <th scope="col">Описание категории</th>
+                        <th scope="col">Название</th>
+                        <th scope="col">Описание</th>
                         <th scope="col">Категория</th>
-                        <th scope="col">Изображение категории</th>
+                        <th scope="col">Изображение</th>
                         <th scope="col">Статус</th>
+                        <th scope="col">Действия</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -41,6 +42,16 @@
                                 </div>
                             @endif
                         </td>
+                        <td>
+                            <a href="{{ route('product.edit', $product->id) }}" class="btn btn-success">{{__ ('Редактировать')}}</a>
+                            <a href="{{ route('product.show', $product->id) }}" class="btn btn-warning">{{__ ('Подробнее')}}</a>
+                            <form action="{{route('product.delete', $product->id) }}" method="POST" >
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger">УДАЛИТЬ</button>
+                            </form>
+                        </td>
+
                     </tr>
                 @empty
                     {{__ ('Данные не найдены')}}
