@@ -6,6 +6,9 @@
         <a href="{{ route('records') }}">{{__('Новости') }}</a>
     </li>
     <li>
+        <a href="{{ route('category') }}">{{__('Категории (клиент)') }}</a>
+    </li>
+    <li>
         <a href="{{ route('post.index') }}">{{__('Post') }}</a>
     </li>
     <li>

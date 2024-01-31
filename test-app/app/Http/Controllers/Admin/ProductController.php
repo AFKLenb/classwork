@@ -78,7 +78,6 @@ class ProductController extends Controller
             'text' => 'required',
             'is_active' => 'required',
             'category_id' => 'required',
-            'image' => 'required|Image|mimes:jpg,png,jpeg,bmp,gif,svg|max:2048'
         ]);
         $input = $request->all();
         if ($image = $request->file('image')){
@@ -86,7 +85,7 @@ class ProductController extends Controller
             $profileImage = date('YmHis') . "." . $image->getClientOriginalExtension();
             $image->move($destionPath,$profileImage);
             $input['image']="$profileImage";
-        } else{
+        }else{
             unset($input['image']);
         }
 

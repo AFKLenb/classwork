@@ -39,7 +39,7 @@
                             @endif
                         </td>
                         <td>
-                            <a href="{{ route('category.edit', $category->id) }}" class="btn btn-success">{{__ ('Редактировать')}}</a>
+                            <a  href="{{ route('category.edit', $category->id) }}" class="btn btn-success">{{__ ('Редактировать')}}</a>
                             <a href="{{ route('category.show', $category->id) }}" class="btn btn-warning">{{__ ('Подробнее')}}</a>
                             <form action="{{route('category.delete', $category->id) }}" method="POST" >
                                 @csrf

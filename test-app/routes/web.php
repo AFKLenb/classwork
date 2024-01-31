@@ -24,6 +24,9 @@ use Illuminate\Support\Facades\Route;
 //});
 
 Route::get('/', [\App\Http\Controllers\FrontendController::class, 'index'])->name('home');
+Route::get('/category', [\App\Http\Controllers\FrontendController::class, 'category'])->name('category');
+Route::get('/products/{id}', [\App\Http\Controllers\FrontendController::class, 'products'])->name('products');
+Route::get('/product-card/{id}', [\App\Http\Controllers\FrontendController::class, 'product'])->name('product');
 Route::get('/records', [\App\Http\Controllers\ListController::class, 'records'])->name('records');
 Route::prefix('/post',)->group(function (){
     Route::get('/index', [\App\Http\Controllers\PostController::class, 'index'])->name('post.index');
